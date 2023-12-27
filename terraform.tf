@@ -1,17 +1,17 @@
 terraform {
 
   cloud {
-    organization = "organization-name"
+    organization = "LATAM_AIRLINES"
 
     workspaces {
-      name = "learn-terraform-cloud"
+      name = "TESTER_JORGAR"
     }
   }
 
   required_providers {
     aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.31.0"
+      source  = "hashicorp/google"
+      version = "~> 5.10.0""
     }
   }
 
