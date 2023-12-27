@@ -1,8 +1,6 @@
-output "instance_ami" {
-  value = aws_instance.ubuntu.ami
+output "endpoint" {
+  value = google_container_cluster.default.endpoint
 }
-
-output "instance_arn" {
-  value = aws_instance.ubuntu.arn
+output "master_version" {
+  value = google_container_cluster.default.master_version
 }
-
