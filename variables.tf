@@ -1,15 +1,15 @@
-variable "region" {
-  description = "AWS region"
-  default     = "us-west-1"
+variable "name" {
+  default = "demo-cluster"
 }
-
-variable "instance_type" {
-  description = "Type of EC2 instance to provision"
-  default     = "t2.micro"
+variable "project" {
+  default = "smiling-drake-403912"
 }
-
-variable "instance_name" {
-  description = "EC2 instance name"
-  default     = "Provisioned by Terraform"
+variable "location" {
+  default = "us-central1-a"
 }
-
+variable "initial_node_count" {
+  default = 3
+}
+variable "machine_type" {
+  default = "n1-standard-1"
+}
