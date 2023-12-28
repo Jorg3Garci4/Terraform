@@ -1,9 +1,9 @@
 terraform {
   cloud {
-    organization = "nombre-de-tu-organizacion"
+    organization = "TESTER_JORGAR"
 
     workspaces {
-      name = "nombre-de-tu-workspace"
+      name = "create_clusterk8"
     }
   }
 
