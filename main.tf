@@ -8,13 +8,12 @@ resource "google_container_cluster" "default" {
   description = "Demo GKE Cluster"
   location    = var.location
 
-  enable_legacy_abac        = true 
-  remove_default_node_pool  = true
-  initial_node_count        = var.initial_node_count
+  enable_legacy_abac       = true 
+  remove_default_node_pool = true
+  initial_node_count       = var.initial_node_count
+}
 
-    }
-  
-resource "google_container_node_pool" "default {
+resource "google_container_node_pool" "default" {
   name       = "${var.name}-node-pool"
   project    = var.project
   location   = var.location
@@ -35,3 +34,4 @@ resource "google_container_node_pool" "default {
     ]
   }
 }
+
