@@ -1,8 +1,8 @@
 provider "google" {
-  credentials = file("./smiling-drake-403912-87d5d6474720.json")
+  credentials = file("./smiling-drake-403912-cd8f78eb5e1f.json")
 }
 
-resource "google_container_cluster" "default" {
+resource "google_container_cluster" "cluser_gke" {
   name        = var.name
   project     = var.project
   description = "Demo GKE Cluster"
@@ -14,7 +14,7 @@ resource "google_container_cluster" "default" {
 
     }
   
-resource "google_container_node_pool" "default" {
+resource "google_container_node_pool" "cluser_gke {
   name       = "${var.name}-node-pool"
   project    = var.project
   location   = var.location

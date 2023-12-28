@@ -7,4 +7,4 @@ terraform {
       name = "TESTER_JORGAR"
     }
   }
-
+}
