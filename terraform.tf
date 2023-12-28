@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "LATAM_AIRLINES"
+    organization = "TESTER_JORGAR"
     workspaces {
       name = "create_clusterk8"
     }
