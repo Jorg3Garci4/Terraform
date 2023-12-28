@@ -1,5 +1,5 @@
 variable "name" {
-  default = "demo-cluster"
+  default = "ClusterGK8"
 }
 variable "project" {
   default = "smiling-drake-403912"
