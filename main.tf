@@ -3,7 +3,7 @@ provider "google" {
 }
 
 resource "google_container_cluster" "default" {
-  name        = "gke-cluster-${var.name}"
+  name        = var.cluster_name
   project     = var.project
   description = "Demo GKE Cluster"
   location    = var.location
@@ -14,7 +14,7 @@ resource "google_container_cluster" "default" {
 }
 
 resource "google_container_node_pool" "default" {
-  name       = "${var.name}-node-pool"
+  name       = "${var.cluster_name}-node-pool"
   project    = var.project
   location   = var.location
   cluster    = google_container_cluster.default.name
