@@ -1,7 +1,7 @@
 provider "google" {
   credentials = file("./smiling-drake-403912-cd8f78eb5e1f.json")
   project     = var.project
-  region      = var.location  # Asegúrate de ajustar según tus necesidades
+  region      = var.location
 }
 
 resource "google_container_cluster" "default" {
@@ -16,7 +16,7 @@ resource "google_container_cluster" "default" {
 }
 
 resource "google_container_node_pool" "default" {
-  name       = "${var.cluster_name}-node-pool"
+  name       = "${lower(var.cluster_name)}-node-pool"
   project    = var.project
   location   = var.location
   cluster    = google_container_cluster.default.name
@@ -36,5 +36,3 @@ resource "google_container_node_pool" "default" {
     ]
   }
 }
-
-
