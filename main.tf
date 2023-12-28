@@ -1,9 +1,5 @@
-provider "google" {
-  credentials = file("./smiling-drake-403912-cd8f78eb5e1f.json")
-}
-
 resource "google_container_cluster" "default" {
-  name        = "gke-cluster-${var.cluster_name}"
+  name        = "gke-cluster-${lower(var.cluster_name)}"
   project     = var.project
   description = "Demo GKE Cluster"
   location    = var.location
