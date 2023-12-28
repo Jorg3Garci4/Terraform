@@ -13,7 +13,3 @@ variable "initial_node_count" {
 variable "machine_type" {
   default = "n1-standard-1"
 }
-variable "cluster_name" {
-  description = "Name of the GKE cluster"
-  type        = string
-}
