@@ -1,3 +1,9 @@
+provider "google" {
+  credentials = file("./smiling-drake-403912-cd8f78eb5e1f.json")
+  project     = var.project
+  region      = var.location  # Asegúrate de ajustar según tus necesidades
+}
+
 resource "google_container_cluster" "default" {
   name        = "gke-cluster-${lower(var.cluster_name)}"
   project     = var.project
