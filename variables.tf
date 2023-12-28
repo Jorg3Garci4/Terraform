@@ -4,8 +4,8 @@ variable "name" {
 variable "project" {
   default = "smiling-drake-403912"
 }
-variable "region" {
-  default = "us-central1"
+variable "location" {
+  default = "us-central1-a"
 }
 variable "initial_node_count" {
   default = 2
