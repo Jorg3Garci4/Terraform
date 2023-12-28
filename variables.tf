@@ -1,4 +1,4 @@
-variable "name" {
+variable "cluster_name" {
   default = "ClusterGK8"
 }
 variable "project" {
