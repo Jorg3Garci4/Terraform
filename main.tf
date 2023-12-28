@@ -6,7 +6,7 @@ resource "google_container_cluster" "default" {
   name        = var.name
   project     = var.project
   description = "Demo GKE Cluster"
-  location    = var.location
+  region    = var.region
 
   enable_legacy_abac       = true 
   remove_default_node_pool = true
@@ -16,7 +16,7 @@ resource "google_container_cluster" "default" {
 resource "google_container_node_pool" "default" {
   name       = "${var.name}-node-pool"
   project    = var.project
-  location   = var.location
+  region   = var.region
   cluster    = google_container_cluster.default.name
   node_count = 3
 
